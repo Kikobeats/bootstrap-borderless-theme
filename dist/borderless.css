@@ -1,6 +1,6 @@
 /**
- * bootswatch-borderless-theme - borderless theme for Bootstrap
- * @version v0.12.28
+ * bootstrap-borderless-theme - Borderless theme for Bootstrap
+ * @version v0.12.29
  * @link    https://github.com/Kikobeats/borderless-theme-for-Bootstrap
  * @author  Kiko Beats (https://github.com/Kikobeats)
  * @license MIT
@@ -6285,6 +6285,16 @@ blockquote.pull-right {
 .navbar-brand {
   padding-top: 20px;
 }
+.navbar-inverse .dropdown-menu {
+  background: #3498db;
+}
+.navbar-inverse .dropdown-menu > li > a {
+  color: white;
+}
+.navbar-inverse .dropdown-menu > li > a:hover {
+  background: #217dbb;
+  color: #e6e6e6;
+}
 @media (max-width: 768px) {
   .navbar .navbar-nav > li > a {
     margin: 0;
@@ -6331,6 +6341,7 @@ blockquote.pull-right {
   border-color: #ef4836;
   color: #ef4836;
 }
+.well-bold,
 .btn-bold {
   border-width: 2px;
   font-weight: 600;
@@ -6382,6 +6393,9 @@ legend {
 }
 .input-group-addon {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input[type="text"] {
+  color: #999999;
 }
 .nav .open > a,
 .nav .open > a:hover,
@@ -6461,4 +6475,79 @@ legend {
 }
 .modal .close {
   color: #333333;
+}
+.panel-body.panel-primary {
+  border-color: #3498db;
+}
+.panel-body.panel-success {
+  border-color: #2ecc71;
+}
+.panel-body.panel-warning {
+  border-color: #f89406;
+}
+.panel-body.panel-danger {
+  border-color: #ef4836;
+}
+.panel-body.panel-info {
+  border-color: #41c1dd;
+}
+.well-default {
+  border-color: #999999;
+  background: #fdfdfd;
+}
+.well-default > form > fieldset > .form-group input,
+.well-default > form > fieldset > .form-group textarea,
+.well-default > form > fieldset > .form-group select,
+.well-default > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+  border-color: #999999;
+}
+.well-primary {
+  border-color: #3498db;
+  background: #fdfdfd;
+}
+.well-primary > form > fieldset > .form-group input,
+.well-primary > form > fieldset > .form-group textarea,
+.well-primary > form > fieldset > .form-group select,
+.well-primary > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+  border-color: #3498db;
+}
+.well-success {
+  border-color: #2ecc71;
+  background: #fdfdfd;
+}
+.well-success > form > fieldset > .form-group input,
+.well-success > form > fieldset > .form-group textarea,
+.well-success > form > fieldset > .form-group select,
+.well-success > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+  border-color: #2ecc71;
+}
+.well-warning {
+  border-color: #f89406;
+  background: #fdfdfd;
+}
+.well-warning > form > fieldset > .form-group input,
+.well-warning > form > fieldset > .form-group textarea,
+.well-warning > form > fieldset > .form-group select,
+.well-warning > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+  border-color: #f89406;
+}
+.well-danger {
+  border-color: #ef4836;
+  background: #fdfdfd;
+}
+.well-danger > form > fieldset > .form-group input,
+.well-danger > form > fieldset > .form-group textarea,
+.well-danger > form > fieldset > .form-group select,
+.well-danger > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+  border-color: #ef4836;
+}
+.well-info {
+  border-color: #41c1dd;
+  background: #fdfdfd;
+}
+.well-info > form > fieldset > .form-group input,
+.well-info > form > fieldset > .form-group textarea,
+.well-info > form > fieldset > .form-group select,
+.well-info > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+  border-color: #41c1dd;
 }

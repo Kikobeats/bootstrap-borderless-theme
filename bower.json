@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-borderless-theme",
+  "description": "Borderless theme for Bootstrap",
+  "version": "0.12.29",
+  "authors": [
+    "Kiko Beats <josefrancisco.verdu@gmail.com>"
+  ],
+  "homepage": "https://github.com/Kikobeats/bootstrap-bordeless-theme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "MIT"
+}

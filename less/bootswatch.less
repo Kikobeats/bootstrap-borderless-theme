@@ -51,6 +51,17 @@ blockquote.pull-right {
   }
 }
 
+.navbar-inverse .dropdown-menu{
+  background: @brand-primary;
+  > li > a {
+    color: white;
+    &:hover {
+      background: darken(@brand-primary, 10%);
+      color: darken(white, 10%);
+    }
+  }
+}
+
 @media (max-width: @grid-float-breakpoint) {
   .navbar {
     .navbar-nav > li > a {
@@ -60,6 +71,19 @@ blockquote.pull-right {
 }
 
 // Buttons ====================================================================
+
+.btn-color (@border-color, @color) {
+  background-color:transparent;
+  border-color: @border-color;
+  color: @color;
+}
+
+.btn-size (@font-size, @height, @line-height, @padding) {
+  font-size: @font-size;
+  height: @height;
+  line-height: @line-height;
+  padding: 0 @padding;
+}
 
 .btn {
   font-family: @headings-font-family;
@@ -73,43 +97,15 @@ blockquote.pull-right {
     box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.09);
   }
 
-  &.btn-default {
-    background-color:transparent;
-    border-color: @gray-dark;
-    color: @gray-darker;
-  }
-
-  &.btn-primary {
-    background-color:transparent;
-    border-color: @btn-primary-border;
-    color: @btn-primary-border;
-  }
-
-  &.btn-success {
-    background-color:transparent;
-    border-color: @btn-success-border;
-    color: @btn-success-border;
-  }
-
-  &.btn-info {
-    background-color:transparent;
-    border-color: @btn-info-border;
-    color: @btn-info-border;
-  }
-
-  &.btn-warning {
-    background-color:transparent;
-    border-color: @btn-warning-border;
-    color: @btn-warning-border;
-  }
-
-  &.btn-danger {
-    background-color:transparent;
-    border-color: @btn-danger-border;
-    color: @btn-danger-border;
-  }
+  &.btn-default { .btn-color(@gray-dark, @gray-darker); }
+  &.btn-primary { .btn-color(@btn-primary-border, @btn-primary-border); }
+  &.btn-success { .btn-color(@btn-success-border, @btn-success-border); }
+  &.btn-info { .btn-color(@btn-info-border, @btn-info-border); }
+  &.btn-warning { .btn-color(@btn-warning-border, @btn-warning-border); }
+  &.btn-danger { .btn-color(@btn-danger-border, @btn-danger-border); }
 }
 
+.well-bold,
 .btn-bold {
   border-width: 2px;
   font-weight: 600;
@@ -123,40 +119,11 @@ blockquote.pull-right {
   border-radius: 0px;
 }
 
-.btn-tiny {
-  font-size: 9.6px;
-  height: 24px;
-  line-height: 24px;
-  padding: 0 24px
-}
-
-.btn-small {
-  font-size: 12px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 30px;
-}
-
-.btn-large {
-  font-size: 20px;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 50px;
-}
-
-.btn-jumbo {
-  font-size: 24px;
-  height: 60px;
-  line-height: 60px;
-  padding: 0 60px;
-}
-
-.btn-giant {
-  font-size: 28px;
-  height: 70px;
-  line-height: 70px;
-  padding: 0 70px;
-}
+.btn-tiny { .btn-size(9.6px, 24px, 24px, 24px); }
+.btn-small { .btn-size(12px, 30px, 30px, 30px); }
+.btn-large { .btn-size(20px, 50px, 50px, 50px); }
+.btn-jumbo { .btn-size(24px, 60px, 60px, 60px); }
+.btn-giant { .btn-size(28px, 70px, 70px, 70px); }
 
 // Typography =================================================================
 
@@ -177,6 +144,10 @@ legend {
 
 .input-group-addon {
   font-family: @font-family-sans-serif;
+}
+
+input[type="text"] {
+  color: @gray-dark;
 }
 
 // Navs =======================================================================
@@ -292,3 +263,31 @@ legend {
     color: @text-color;
   }
 }
+
+.panel-mixin (@color) { border-color: @color}
+.panel-body.panel-primary { .panel-mixin(@brand-primary); }
+.panel-body.panel-success { .panel-mixin(@brand-success); }
+.panel-body.panel-warning { .panel-mixin(@brand-warning); }
+.panel-body.panel-danger { .panel-mixin(@brand-danger); }
+.panel-body.panel-info { .panel-mixin(@brand-info); }
+
+// Well ====================================================================
+
+.well-mixin(@color) {
+  border-color: @color;
+  background: lighten(@gray-lighter, 6%);
+
+  > form > fieldset > .form-group {
+    input, textarea, select,
+    .control input:checked ~ .control-indicator {
+      border-color: @color;
+    }
+  }
+}
+
+.well-default { .well-mixin(@panel-default-text); }
+.well-primary { .well-mixin(@brand-primary); }
+.well-success { .well-mixin(@brand-success); }
+.well-warning { .well-mixin(@brand-warning); }
+.well-danger { .well-mixin(@brand-danger); }
+.well-info { .well-mixin(@brand-info); }

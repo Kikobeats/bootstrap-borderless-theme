@@ -1,23 +1,23 @@
 {
   "name": "bootstrap-borderless-theme",
   "description": "Borderless theme for Bootstrap",
-  "version": "0.12.28",
+  "version": "0.12.29",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
     "url": "https://github.com/Kikobeats"
   },
   "devDependencies": {
+    "bootstrap": "*",
     "coffee-script": "*",
     "gulp": "*",
-    "bootstrap": "*",
-    "gulp-util": "*",
-    "gulp-less": "*",
+    "gulp-autoprefixer": "*",
     "gulp-concat": "*",
-    "gulp-header": "*",
     "gulp-cssmin": "*",
+    "gulp-header": "*",
+    "gulp-less": "*",
     "gulp-livereload": "*",
-    "gulp-autoprefixer": "*"
+    "gulp-util": "*"
   },
   "engines": {
     "node": "*"
@@ -30,5 +30,5 @@
   ],
   "license": "MIT",
   "main": "./dist/borderless.min.css",
-  "repository": "Kikobeats/bootstrap-borderless-theme",
+  "repository": "Kikobeats/bootstrap-borderless-theme"
 }
