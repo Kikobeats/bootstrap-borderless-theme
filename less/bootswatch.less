@@ -309,12 +309,36 @@ input[placeholder="Search"] {
   }
 }
 
-.alert {
+// Alert =====================================================================
+
+.alert-color(@color) {
   .alert-link {
-    color: @alert-success-text;
+    color: @color;
     text-decoration: underline;
   }
+  background-color: transparent;
+  border-color: @color;
+  color: @color;
+  button {
+    color: @color;
+    &:hover {
+      color: darken(@color, 5%);
+    }
+  }
 }
+
+.alert-bold {
+  border-width: 2px;
+}
+
+
+.alert-primary { .alert-color(@brand-primary); }
+.alert-success { .alert-color(@brand-success); }
+.alert-info { .alert-color(@brand-info); }
+.alert-warning { .alert-color(@brand-warning); }
+.alert-danger { .alert-color(@brand-danger); }
+
+// Label =====================================================================
 
 .label {
   font-weight: normal;
@@ -324,6 +348,8 @@ input[placeholder="Search"] {
     color: @text-color;
   }
 }
+
+// Badge =====================================================================
 
 .badge {
   padding: 1px 7px 5px;

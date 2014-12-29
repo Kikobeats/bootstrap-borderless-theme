@@ -6683,9 +6683,83 @@ input[placeholder="Search"] {
   color: #fff;
   opacity: 1;
 }
-.alert .alert-link {
-  color: #ffffff;
+.alert-bold {
+  border-width: 2px;
+}
+.alert-primary {
+  background-color: transparent;
+  border-color: #3498db;
+  color: #3498db;
+}
+.alert-primary .alert-link {
+  color: #3498db;
   text-decoration: underline;
+}
+.alert-primary button {
+  color: #3498db;
+}
+.alert-primary button:hover {
+  color: #258cd1;
+}
+.alert-success {
+  background-color: transparent;
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+.alert-success .alert-link {
+  color: #2ecc71;
+  text-decoration: underline;
+}
+.alert-success button {
+  color: #2ecc71;
+}
+.alert-success button:hover {
+  color: #29b765;
+}
+.alert-info {
+  background-color: transparent;
+  border-color: #41c1dd;
+  color: #41c1dd;
+}
+.alert-info .alert-link {
+  color: #41c1dd;
+  text-decoration: underline;
+}
+.alert-info button {
+  color: #41c1dd;
+}
+.alert-info button:hover {
+  color: #2bbad9;
+}
+.alert-warning {
+  background-color: transparent;
+  border-color: #f89406;
+  color: #f89406;
+}
+.alert-warning .alert-link {
+  color: #f89406;
+  text-decoration: underline;
+}
+.alert-warning button {
+  color: #f89406;
+}
+.alert-warning button:hover {
+  color: #df8505;
+}
+.alert-danger {
+  background-color: transparent;
+  border-color: #ef4836;
+  color: #ef4836;
+}
+.alert-danger .alert-link {
+  color: #ef4836;
+  text-decoration: underline;
+}
+.alert-danger button {
+  color: #ef4836;
+}
+.alert-danger button:hover {
+  color: #ed321e;
 }
 .label {
   font-weight: normal;
