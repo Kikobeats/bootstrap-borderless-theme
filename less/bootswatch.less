@@ -1,3 +1,10 @@
+/* TODO: Pager Color */
+/* TODO: Badges Color */
+/* TODO: Jumbotron */
+/* TODO: List Color */
+/* check that bold works fine */
+
+
 // Borderless 1.0.0
 // Bootswatch
 // -----------------------------------------------------
@@ -89,7 +96,7 @@ blockquote.pull-right {
       border-radius: 4px;
       background: transparent;
       color: @brand-primary;
-
+      transition: margin-top 0.35s ease;
       &:hover {
         &:extend(.nav-tabs > li > a);
         margin-top: -8px;
@@ -219,46 +226,73 @@ input[placeholder="Search"] {
 
 // Pagination =================================================================
 
-/* TODO: Pagination color */
-/* TODO: Pager Color */
-/* TODO: Badges Color */
-/* TODO: Jumbotron */
-/* TODO: List Color */
-.pagination {
+.pagination-color(@color, @border-color:@color){
+  > li {
+    > a {
+      border-color: @border-color;
+      color: @color;
 
+      &:hover{
+        background-color: @color;
+      }
+    }
+
+    &.active > a {
+      background: @color;
+      border-color: @border-color;
+    }
+
+    &.disabled > a {
+      color: lighten(@color, 35%);
+      border-color: lighten(@border-color, 35%);
+    }
+  }
+}
+
+.pagination {
   &-lg > li > a,
   &-lg > li > span {
     padding: 14px 24px;
   }
 
-  > li {
+  &-bold > li > a {
+    border-width: 2px;
+  }
+  .pagination-color(@panel-default-text, @gray-dark);
+}
+
+.pagination-primary {.pagination-color(@brand-primary);}
+.pagination-success {.pagination-color(@brand-success);}
+.pagination-info    {.pagination-color(@brand-info);}
+.pagination-warning {.pagination-color(@brand-warning);}
+.pagination-danger  {.pagination-color(@brand-danger);}
+
+.pager-color(@color, @border-color: @color) {
+  li {
     > a {
-      border-color: @panel-default-text;
-      color: @gray-dark;
+      color: @color;
+      border-color: @border-color;
+      &:hover,
+      &:focus {
+        background: @color;
+        color: white;
+      }
     }
 
-    &.active > a {
-    background: @panel-default-text;
-    border-color: @panel-default-text;
+    &.disabled > a {
+      color: lighten(@color, 35%);
+      border-color: lighten(@border-color, 35%);
     }
   }
 }
 
-.pager {
-
-  a {
-    color: @text-color;
-  }
-
-  a:hover {
-    border-color: transparent;
-    color: #fff;
-  }
-
-  .disabled a {
-    border-color: @pager-border;
-  }
-}
+.pager-bold > li > a {border-width: 2px;}
+.pager { .pager-color(@gray-dark, @gray-light); }
+.pager-primary { .pager-color(@brand-primary); }
+.pager-success { .pager-color(@brand-success); }
+.pager-info { .pager-color(@brand-info); }
+.pager-warning { .pager-color(@brand-warning); }
+.pager-danger { .pager-color(@brand-danger); }
 
 // Indicators =================================================================
 
@@ -289,7 +323,6 @@ input[placeholder="Search"] {
     border: 1px solid #ddd;
     color: @text-color;
   }
-
 }
 
 .badge {

@@ -6251,6 +6251,11 @@ button.close {
     display: none !important;
   }
 }
+/* TODO: Pager Color */
+/* TODO: Badges Color */
+/* TODO: Jumbotron */
+/* TODO: List Color */
+/* check that bold works fine */
 blockquote,
 .blockquote-reverse,
 blockquote.pull-right {
@@ -6313,6 +6318,8 @@ blockquote.pull-right {
   border-radius: 4px;
   background: transparent;
   color: #3498db;
+  -webkit-transition: margin-top 0.35s ease;
+          transition: margin-top 0.35s ease;
 }
 .nav-tabs > li > a:hover {
   margin-top: -8px;
@@ -6487,32 +6494,183 @@ input[placeholder="Search"] {
 .nav .open > a:focus {
   border: 1px solid #ddd;
 }
-/* TODO: Pagination color */
-/* TODO: Pager Color */
-/* TODO: Badges Color */
-/* TODO: Jumbotron */
-/* TODO: List Color */
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 14px 24px;
+}
+.pagination-bold > li > a {
+  border-width: 2px;
 }
 .pagination > li > a {
   border-color: #999999;
   color: #999999;
 }
+.pagination > li > a:hover {
+  background-color: #999999;
+}
 .pagination > li.active > a {
   background: #999999;
   border-color: #999999;
 }
-.pager a {
-  color: #333333;
+.pagination > li.disabled > a {
+  color: #f2f2f2;
+  border-color: #f2f2f2;
 }
-.pager a:hover {
-  border-color: transparent;
-  color: #fff;
+.pagination-primary > li > a {
+  border-color: #3498db;
+  color: #3498db;
 }
-.pager .disabled a {
-  border-color: #eeeeee;
+.pagination-primary > li > a:hover {
+  background-color: #3498db;
+}
+.pagination-primary > li.active > a {
+  background: #3498db;
+  border-color: #3498db;
+}
+.pagination-primary > li.disabled > a {
+  color: #cce5f6;
+  border-color: #cce5f6;
+}
+.pagination-success > li > a {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+.pagination-success > li > a:hover {
+  background-color: #2ecc71;
+}
+.pagination-success > li.active > a {
+  background: #2ecc71;
+  border-color: #2ecc71;
+}
+.pagination-success > li.disabled > a {
+  color: #bcf0d2;
+  border-color: #bcf0d2;
+}
+.pagination-info > li > a {
+  border-color: #41c1dd;
+  color: #41c1dd;
+}
+.pagination-info > li > a:hover {
+  background-color: #41c1dd;
+}
+.pagination-info > li.active > a {
+  background: #41c1dd;
+  border-color: #41c1dd;
+}
+.pagination-info > li.disabled > a {
+  color: #d8f2f8;
+  border-color: #d8f2f8;
+}
+.pagination-warning > li > a {
+  border-color: #f89406;
+  color: #f89406;
+}
+.pagination-warning > li > a:hover {
+  background-color: #f89406;
+}
+.pagination-warning > li.active > a {
+  background: #f89406;
+  border-color: #f89406;
+}
+.pagination-warning > li.disabled > a {
+  color: #fddfb3;
+  border-color: #fddfb3;
+}
+.pagination-danger > li > a {
+  border-color: #ef4836;
+  color: #ef4836;
+}
+.pagination-danger > li > a:hover {
+  background-color: #ef4836;
+}
+.pagination-danger > li.active > a {
+  background: #ef4836;
+  border-color: #ef4836;
+}
+.pagination-danger > li.disabled > a {
+  color: #fcdfdb;
+  border-color: #fcdfdb;
+}
+.pager-bold > li > a {
+  border-width: 2px;
+}
+.pager li > a {
+  color: #999999;
+  border-color: #dddddd;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  background: #999999;
+  color: white;
+}
+.pager li.disabled > a {
+  color: #f2f2f2;
+  border-color: #ffffff;
+}
+.pager-primary li > a {
+  color: #3498db;
+  border-color: #3498db;
+}
+.pager-primary li > a:hover,
+.pager-primary li > a:focus {
+  background: #3498db;
+  color: white;
+}
+.pager-primary li.disabled > a {
+  color: #cce5f6;
+  border-color: #cce5f6;
+}
+.pager-success li > a {
+  color: #2ecc71;
+  border-color: #2ecc71;
+}
+.pager-success li > a:hover,
+.pager-success li > a:focus {
+  background: #2ecc71;
+  color: white;
+}
+.pager-success li.disabled > a {
+  color: #bcf0d2;
+  border-color: #bcf0d2;
+}
+.pager-info li > a {
+  color: #41c1dd;
+  border-color: #41c1dd;
+}
+.pager-info li > a:hover,
+.pager-info li > a:focus {
+  background: #41c1dd;
+  color: white;
+}
+.pager-info li.disabled > a {
+  color: #d8f2f8;
+  border-color: #d8f2f8;
+}
+.pager-warning li > a {
+  color: #f89406;
+  border-color: #f89406;
+}
+.pager-warning li > a:hover,
+.pager-warning li > a:focus {
+  background: #f89406;
+  color: white;
+}
+.pager-warning li.disabled > a {
+  color: #fddfb3;
+  border-color: #fddfb3;
+}
+.pager-danger li > a {
+  color: #ef4836;
+  border-color: #ef4836;
+}
+.pager-danger li > a:hover,
+.pager-danger li > a:focus {
+  background: #ef4836;
+  color: white;
+}
+.pager-danger li.disabled > a {
+  color: #fcdfdb;
+  border-color: #fcdfdb;
 }
 .close {
   color: #fff;

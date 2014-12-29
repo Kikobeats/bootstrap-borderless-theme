@@ -47,4 +47,4 @@ gulp.task "minify", ->
 gulp.task "default", ->
   livereload.listen()
   gulp.start ["normal", "minify"]
-  gulp.watch('less/*.less', ['normal', 'minify'])
+  gulp.watch(['less/*.less', 'index.html'], ['normal', 'minify'])
