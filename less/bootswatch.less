@@ -1,15 +1,17 @@
-/* TODO: Pager Color */
-/* TODO: Badges Color */
-/* TODO: Jumbotron */
-/* TODO: List Color */
-/* check that bold works fine */
-
-
 // Borderless 1.0.0
 // Bootswatch
 // -----------------------------------------------------
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400");
+
+// Colors ====================================================================
+
+.brand-primary {color: @brand-primary !important;}
+.brand-success {color: @brand-success !important;}
+.brand-info {color: @brand-info !important;}
+.brand-warning {color: @brand-warning !important;}
+.brand-danger {color: @brand-danger !important;}
+.brand-default {color: @gray-dark !important;}
 
 // Blockquote =================================================================
 
@@ -136,11 +138,6 @@ blockquote.pull-right {
 
 }
 .breadcrumb { .breadcrumb-color(@panel-default-text, @gray-light); }
-.breadcrumb-primary { .breadcrumb-color(@brand-primary); }
-.breadcrumb-success { .breadcrumb-color(@brand-success); }
-.breadcrumb-warning { .breadcrumb-color(@brand-warning); }
-.breadcrumb-danger { .breadcrumb-color(@brand-danger); }
-.breadcrumb-info { .breadcrumb-color(@brand-info); }
 
 // Buttons ====================================================================
 
@@ -176,8 +173,6 @@ blockquote.pull-right {
   &.btn-danger { .btn-color(@btn-danger-border, @btn-danger-border); }
 }
 
-.breadcrumb-bold,
-.well-bold,
 .btn-bold {
   border-width: 2px;
   font-weight: 600;
@@ -259,14 +254,8 @@ input[placeholder="Search"] {
   &-bold > li > a {
     border-width: 2px;
   }
-  .pagination-color(@panel-default-text, @gray-dark);
+  .pagination-color(@brand-primary);
 }
-
-.pagination-primary {.pagination-color(@brand-primary);}
-.pagination-success {.pagination-color(@brand-success);}
-.pagination-info    {.pagination-color(@brand-info);}
-.pagination-warning {.pagination-color(@brand-warning);}
-.pagination-danger  {.pagination-color(@brand-danger);}
 
 .pager-color(@color, @border-color: @color) {
   li {
@@ -288,12 +277,7 @@ input[placeholder="Search"] {
 }
 
 .pager-bold > li > a {border-width: 2px;}
-.pager { .pager-color(@gray-dark, @gray-light); }
-.pager-primary { .pager-color(@brand-primary); }
-.pager-success { .pager-color(@brand-success); }
-.pager-info { .pager-color(@brand-info); }
-.pager-warning { .pager-color(@brand-warning); }
-.pager-danger { .pager-color(@brand-danger); }
+.pager { .pager-color(@brand-primary); }
 
 // Indicators =================================================================
 
@@ -328,10 +312,6 @@ input[placeholder="Search"] {
   }
 }
 
-.alert-bold {
-  border-width: 2px;
-}
-
 .alert-primary { .alert-color(@brand-primary); }
 .alert-success { .alert-color(@brand-success); }
 .alert-info { .alert-color(@brand-info); }
@@ -356,8 +336,14 @@ input[placeholder="Search"] {
   font-weight: normal;
 }
 
-// Progress bars ==============================================================
+// Jumbotron ==================================================================
 
+.jumbotron {
+  background-color: transparent;
+  border: 1px solid @brand-primary;
+}
+
+// Progress bars ==============================================================
 // Containers =================================================================
 
 .panel {
@@ -402,6 +388,7 @@ input[placeholder="Search"] {
 // Well ====================================================================
 
 .well-color(@color) {
+  color: @color;
   border-color: @color;
   background: lighten(@gray-lighter, 6%);
 
@@ -412,6 +399,7 @@ input[placeholder="Search"] {
   }
 }
 
+.well-bold { border-width: 2px; }
 .well { .well-color(@panel-default-text); }
 .well-primary { .well-color(@brand-primary); }
 .well-success { .well-color(@brand-success); }
