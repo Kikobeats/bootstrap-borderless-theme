@@ -376,9 +376,25 @@ input[placeholder="Search"] {
 
 .modal {
   .close {
-    color: @text-color;
+    color: @brand-primary;
   }
 }
+
+.modal-backdrop {
+  background-color: @gray-light;
+}
+
+.modal-content {
+  border: 1px solid @brand-primary;
+  box-shadow: none;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: lighten(@gray-lighter, 3%);
+}
+
+// Panel =====================================================================
 
 .panel-color (@color) { border-color: @color}
 .panel-body.panel-primary { .panel-color(@brand-primary); }

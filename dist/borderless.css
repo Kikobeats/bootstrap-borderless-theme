@@ -6619,7 +6619,18 @@ input[placeholder="Search"] {
   border-radius: 0 0 4px 4px;
 }
 .modal .close {
-  color: #333333;
+  color: #3498db;
+}
+.modal-backdrop {
+  background-color: #dddddd;
+}
+.modal-content {
+  border: 1px solid #3498db;
+  box-shadow: none;
+}
+.modal-header,
+.modal-footer {
+  border-color: #f6f6f6;
 }
 .panel-body.panel-primary {
   border-color: #3498db;
