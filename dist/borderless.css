@@ -3650,7 +3650,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: left;
   margin-bottom: -1px;
 }
-.nav-tabs > li > a {
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover {
   margin-right: 2px;
   line-height: 1.42857143;
   border: 1px solid transparent;
@@ -6257,9 +6258,6 @@ blockquote.pull-right {
   color: #666666;
   font-style: italic;
 }
-.navbar {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 .navbar-nav,
 .navbar-form {
   margin-left: 0;
@@ -6300,8 +6298,100 @@ blockquote.pull-right {
     margin: 0;
   }
 }
+.nav-pills li {
+  border: 1px solid #3498db;
+  border-radius: 4px;
+}
+.nav-pills li.disabled {
+  border-color: #eeeeee;
+}
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover {
+  border: 1px solid #3498db;
+  border-bottom-color: transparent;
+  margin-right: 3px;
+  border-radius: 4px;
+  background: transparent;
+  color: #3498db;
+}
+.nav-tabs > li > a:hover {
+  margin-top: -8px;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background: #3498db;
+  color: white;
+  margin-top: 0px;
+}
+.nav-tabs > li.disabled > a,
+.nav-tabs > li.disabled > a:hover,
+.nav-tabs > li.disabled > a:focus {
+  border: 1px solid #eeeeee;
+  border-bottom-color: transparent;
+  color: #eeeeee;
+}
+.breadcrumb {
+  background: transparent;
+  border: 1px solid #999999;
+}
+.breadcrumb li > a {
+  color: #dddddd;
+}
+.breadcrumb li.active {
+  color: #999999;
+}
+.breadcrumb-primary {
+  background: transparent;
+  border: 1px solid #3498db;
+}
+.breadcrumb-primary li > a {
+  color: #b6daf2;
+}
+.breadcrumb-primary li.active {
+  color: #3498db;
+}
+.breadcrumb-success {
+  background: transparent;
+  border: 1px solid #2ecc71;
+}
+.breadcrumb-success li > a {
+  color: #a8ebc4;
+}
+.breadcrumb-success li.active {
+  color: #2ecc71;
+}
+.breadcrumb-warning {
+  background: transparent;
+  border: 1px solid #f89406;
+}
+.breadcrumb-warning li > a {
+  color: #fdd49a;
+}
+.breadcrumb-warning li.active {
+  color: #f89406;
+}
+.breadcrumb-danger {
+  background: transparent;
+  border: 1px solid #ef4836;
+}
+.breadcrumb-danger li > a {
+  color: #fac9c4;
+}
+.breadcrumb-danger li.active {
+  color: #ef4836;
+}
+.breadcrumb-info {
+  background: transparent;
+  border: 1px solid #41c1dd;
+}
+.breadcrumb-info li > a {
+  color: #c3ebf4;
+}
+.breadcrumb-info li.active {
+  color: #41c1dd;
+}
 .btn {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
@@ -6341,6 +6431,7 @@ blockquote.pull-right {
   border-color: #ef4836;
   color: #ef4836;
 }
+.breadcrumb-bold,
 .well-bold,
 .btn-bold {
   border-width: 2px;
@@ -6383,18 +6474,12 @@ blockquote.pull-right {
   padding: 0 70px;
 }
 body {
-  font-family: "Raleway";
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
 }
-legend {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.input-group-addon {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-input[type="text"] {
+input[placeholder="Search"] {
   color: #999999;
 }
 .nav .open > a,
@@ -6402,15 +6487,22 @@ input[type="text"] {
 .nav .open > a:focus {
   border: 1px solid #ddd;
 }
-.pagination {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+/* TODO: Pagination color */
+/* TODO: Pager Color */
+/* TODO: Badges Color */
+/* TODO: Jumbotron */
+/* TODO: List Color */
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 14px 24px;
 }
-.pager {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+.pagination > li > a {
+  border-color: #999999;
+  color: #999999;
+}
+.pagination > li.active > a {
+  background: #999999;
+  border-color: #999999;
 }
 .pager a {
   color: #333333;
@@ -6438,7 +6530,6 @@ input[type="text"] {
   text-decoration: underline;
 }
 .label {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 .label-default {
@@ -6448,7 +6539,6 @@ input[type="text"] {
 .badge {
   padding: 1px 7px 5px;
   vertical-align: 2px;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 .panel {
@@ -6491,14 +6581,13 @@ input[type="text"] {
 .panel-body.panel-info {
   border-color: #41c1dd;
 }
-.well-default {
+.well {
   border-color: #999999;
   background: #fdfdfd;
 }
-.well-default > form > fieldset > .form-group input,
-.well-default > form > fieldset > .form-group textarea,
-.well-default > form > fieldset > .form-group select,
-.well-default > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+.well > form > fieldset > .form-group input,
+.well > form > fieldset > .form-group textarea,
+.well > form > fieldset > .form-group select {
   border-color: #999999;
 }
 .well-primary {
@@ -6507,8 +6596,7 @@ input[type="text"] {
 }
 .well-primary > form > fieldset > .form-group input,
 .well-primary > form > fieldset > .form-group textarea,
-.well-primary > form > fieldset > .form-group select,
-.well-primary > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+.well-primary > form > fieldset > .form-group select {
   border-color: #3498db;
 }
 .well-success {
@@ -6517,8 +6605,7 @@ input[type="text"] {
 }
 .well-success > form > fieldset > .form-group input,
 .well-success > form > fieldset > .form-group textarea,
-.well-success > form > fieldset > .form-group select,
-.well-success > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+.well-success > form > fieldset > .form-group select {
   border-color: #2ecc71;
 }
 .well-warning {
@@ -6527,8 +6614,7 @@ input[type="text"] {
 }
 .well-warning > form > fieldset > .form-group input,
 .well-warning > form > fieldset > .form-group textarea,
-.well-warning > form > fieldset > .form-group select,
-.well-warning > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+.well-warning > form > fieldset > .form-group select {
   border-color: #f89406;
 }
 .well-danger {
@@ -6537,8 +6623,7 @@ input[type="text"] {
 }
 .well-danger > form > fieldset > .form-group input,
 .well-danger > form > fieldset > .form-group textarea,
-.well-danger > form > fieldset > .form-group select,
-.well-danger > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+.well-danger > form > fieldset > .form-group select {
   border-color: #ef4836;
 }
 .well-info {
@@ -6547,7 +6632,6 @@ input[type="text"] {
 }
 .well-info > form > fieldset > .form-group input,
 .well-info > form > fieldset > .form-group textarea,
-.well-info > form > fieldset > .form-group select,
-.well-info > form > fieldset > .form-group .control input:checked ~ .control-indicator {
+.well-info > form > fieldset > .form-group select {
   border-color: #41c1dd;
 }

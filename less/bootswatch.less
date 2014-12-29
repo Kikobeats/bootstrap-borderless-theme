@@ -17,7 +17,6 @@ blockquote.pull-right {
 // Navbar =====================================================================
 
 .navbar {
-  font-family: @headings-font-family;
 
   &-nav,
   &-form {
@@ -70,6 +69,72 @@ blockquote.pull-right {
   }
 }
 
+.nav-pills >  {
+  li {
+  border: 1px solid @brand-primary;
+  border-radius: 4px;
+  }
+
+  li.disabled {
+    border-color: @gray-lighter;
+  }
+}
+
+.nav-tabs  {
+  > li  {
+    > a {
+      border: 1px solid @brand-primary;
+      border-bottom-color: transparent;
+      margin-right: 3px;
+      border-radius: 4px;
+      background: transparent;
+      color: @brand-primary;
+
+      &:hover {
+        &:extend(.nav-tabs > li > a);
+        margin-top: -8px;
+      }
+    }
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      background: @brand-primary;
+      color: white;
+      margin-top: 0px;
+    }
+    &.disabled > a,
+    &.disabled > a:hover,
+    &.disabled > a:focus {
+      border: 1px solid @gray-lighter;
+      border-bottom-color: transparent;
+      color: @gray-lighter;
+    }
+  }
+}
+
+// Breadcrumbs ================================================================
+
+.breadcrumb-color (@color, @color-active: lighten(@color, 30%)) {
+  background: transparent;
+  border: 1px solid @color;
+
+  li {
+    > a {
+      color: @color-active;
+    }
+    &.active {
+      color: @color;
+    }
+  }
+
+}
+.breadcrumb { .breadcrumb-color(@panel-default-text, @gray-light); }
+.breadcrumb-primary { .breadcrumb-color(@brand-primary); }
+.breadcrumb-success { .breadcrumb-color(@brand-success); }
+.breadcrumb-warning { .breadcrumb-color(@brand-warning); }
+.breadcrumb-danger { .breadcrumb-color(@brand-danger); }
+.breadcrumb-info { .breadcrumb-color(@brand-info); }
+
 // Buttons ====================================================================
 
 .btn-color (@border-color, @color) {
@@ -86,7 +151,6 @@ blockquote.pull-right {
 }
 
 .btn {
-  font-family: @headings-font-family;
   font-weight: 400;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
@@ -105,6 +169,7 @@ blockquote.pull-right {
   &.btn-danger { .btn-color(@btn-danger-border, @btn-danger-border); }
 }
 
+.breadcrumb-bold,
 .well-bold,
 .btn-bold {
   border-width: 2px;
@@ -128,7 +193,7 @@ blockquote.pull-right {
 // Typography =================================================================
 
 body {
-  font-family: "Raleway";
+  font-family: @headings-font-family;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -138,15 +203,7 @@ body {
 
 // Forms ======================================================================
 
-legend {
-  font-family: @headings-font-family;
-}
-
-.input-group-addon {
-  font-family: @font-family-sans-serif;
-}
-
-input[type="text"] {
+input[placeholder="Search"] {
   color: @gray-dark;
 }
 
@@ -160,19 +217,34 @@ input[type="text"] {
   }
 }
 
-.pagination {
+// Pagination =================================================================
 
-  font-family: @headings-font-family;
+/* TODO: Pagination color */
+/* TODO: Pager Color */
+/* TODO: Badges Color */
+/* TODO: Jumbotron */
+/* TODO: List Color */
+.pagination {
 
   &-lg > li > a,
   &-lg > li > span {
     padding: 14px 24px;
   }
+
+  > li {
+    > a {
+      border-color: @panel-default-text;
+      color: @gray-dark;
+    }
+
+    &.active > a {
+    background: @panel-default-text;
+    border-color: @panel-default-text;
+    }
+  }
 }
 
 .pager {
-
-  font-family: @headings-font-family;
 
   a {
     color: @text-color;
@@ -211,7 +283,6 @@ input[type="text"] {
 }
 
 .label {
-  font-family: @headings-font-family;
   font-weight: normal;
 
   &-default {
@@ -224,7 +295,6 @@ input[type="text"] {
 .badge {
   padding: 1px 7px 5px;
   vertical-align: 2px;
-  font-family: @headings-font-family;
   font-weight: normal;
 }
 
@@ -264,30 +334,29 @@ input[type="text"] {
   }
 }
 
-.panel-mixin (@color) { border-color: @color}
-.panel-body.panel-primary { .panel-mixin(@brand-primary); }
-.panel-body.panel-success { .panel-mixin(@brand-success); }
-.panel-body.panel-warning { .panel-mixin(@brand-warning); }
-.panel-body.panel-danger { .panel-mixin(@brand-danger); }
-.panel-body.panel-info { .panel-mixin(@brand-info); }
+.panel-color (@color) { border-color: @color}
+.panel-body.panel-primary { .panel-color(@brand-primary); }
+.panel-body.panel-success { .panel-color(@brand-success); }
+.panel-body.panel-warning { .panel-color(@brand-warning); }
+.panel-body.panel-danger { .panel-color(@brand-danger); }
+.panel-body.panel-info { .panel-color(@brand-info); }
 
 // Well ====================================================================
 
-.well-mixin(@color) {
+.well-color(@color) {
   border-color: @color;
   background: lighten(@gray-lighter, 6%);
 
   > form > fieldset > .form-group {
-    input, textarea, select,
-    .control input:checked ~ .control-indicator {
+    input, textarea, select {
       border-color: @color;
     }
   }
 }
 
-.well-default { .well-mixin(@panel-default-text); }
-.well-primary { .well-mixin(@brand-primary); }
-.well-success { .well-mixin(@brand-success); }
-.well-warning { .well-mixin(@brand-warning); }
-.well-danger { .well-mixin(@brand-danger); }
-.well-info { .well-mixin(@brand-info); }
+.well { .well-color(@panel-default-text); }
+.well-primary { .well-color(@brand-primary); }
+.well-success { .well-color(@brand-success); }
+.well-warning { .well-color(@brand-warning); }
+.well-danger { .well-color(@brand-danger); }
+.well-info { .well-color(@brand-info); }
