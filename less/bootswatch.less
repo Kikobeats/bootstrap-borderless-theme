@@ -1,0 +1,294 @@
+// Borderless 1.0.0
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400");
+
+// Blockquote =================================================================
+
+blockquote,
+.blockquote-reverse,
+blockquote.pull-right {
+  border-color: @gray-light;
+  color: @gray-darker;
+  font-style: italic;
+}
+
+// Navbar =====================================================================
+
+.navbar {
+  font-family: @headings-font-family;
+
+  &-nav,
+  &-form {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &-nav > li > a {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    margin: 12px 6px;
+    border: 1px solid transparent;
+    border-radius: @border-radius-base;
+  }
+
+  &-default .navbar-nav > .active > a:hover {
+    color: @navbar-default-link-hover-color;
+  }
+
+  &-inverse .navbar-nav > .active > a:hover {
+    color: @navbar-inverse-link-hover-color;
+  }
+
+  &-inverse .navbar-nav > .open > a,
+  &-inverse .navbar-nav > .open > a:hover,
+  &-inverse .navbar-nav > .open > a:focus {
+    border-color: lighten(@navbar-inverse-bg, 10%);
+  }
+
+  &-brand {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: @grid-float-breakpoint) {
+  .navbar {
+    .navbar-nav > li > a {
+      margin: 0;
+    }
+  }
+}
+
+// Buttons ====================================================================
+
+.btn {
+  font-family: @headings-font-family;
+  font-weight: 400;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  border-width: 1px;
+  border-style: solid;
+
+  &:active {
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.09);
+  }
+
+  &.btn-default {
+    background-color:transparent;
+    border-color: @gray-dark;
+    color: @gray-darker;
+  }
+
+  &.btn-primary {
+    background-color:transparent;
+    border-color: @btn-primary-border;
+    color: @btn-primary-border;
+  }
+
+  &.btn-success {
+    background-color:transparent;
+    border-color: @btn-success-border;
+    color: @btn-success-border;
+  }
+
+  &.btn-info {
+    background-color:transparent;
+    border-color: @btn-info-border;
+    color: @btn-info-border;
+  }
+
+  &.btn-warning {
+    background-color:transparent;
+    border-color: @btn-warning-border;
+    color: @btn-warning-border;
+  }
+
+  &.btn-danger {
+    background-color:transparent;
+    border-color: @btn-danger-border;
+    color: @btn-danger-border;
+  }
+}
+
+.btn-bold {
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.btn-rounded {
+  border-radius: 20px;
+}
+
+.btn-square {
+  border-radius: 0px;
+}
+
+.btn-tiny {
+  font-size: 9.6px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 24px
+}
+
+.btn-small {
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 30px;
+}
+
+.btn-large {
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 50px;
+}
+
+.btn-jumbo {
+  font-size: 24px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 60px;
+}
+
+.btn-giant {
+  font-size: 28px;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 70px;
+}
+
+// Typography =================================================================
+
+body {
+  font-family: "Raleway";
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+legend {
+  font-family: @headings-font-family;
+}
+
+.input-group-addon {
+  font-family: @font-family-sans-serif;
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border: 1px solid #ddd;
+  }
+}
+
+.pagination {
+
+  font-family: @headings-font-family;
+
+  &-lg > li > a,
+  &-lg > li > span {
+    padding: 14px 24px;
+  }
+}
+
+.pager {
+
+  font-family: @headings-font-family;
+
+  a {
+    color: @text-color;
+  }
+
+  a:hover {
+    border-color: transparent;
+    color: #fff;
+  }
+
+  .disabled a {
+    border-color: @pager-border;
+  }
+}
+
+// Indicators =================================================================
+
+.close {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+.alert {
+  .alert-link {
+    color: @alert-success-text;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  font-family: @headings-font-family;
+  font-weight: normal;
+
+  &-default {
+    border: 1px solid #ddd;
+    color: @text-color;
+  }
+
+}
+
+.badge {
+  padding: 1px 7px 5px;
+  vertical-align: 2px;
+  font-family: @headings-font-family;
+  font-weight: normal;
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.panel {
+  .box-shadow(none);
+
+  &-default {
+    .close {
+      color: @text-color;
+    }
+  }
+
+  &-primary,
+  &-success,
+  &-warning,
+  &-danger,
+  &-info {
+    .panel-heading {
+      color: #fff;
+    }
+
+    .panel-body {
+      border: 1px solid #ddd;
+      border-top-width: 0;
+      border-radius: 0 0 @border-radius-base @border-radius-base;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
+  }
+}
