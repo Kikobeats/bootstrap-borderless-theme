@@ -5,7 +5,8 @@
 [![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat)](https://www.gittip.com/Kikobeats/)
 
 
-> Borderless theme for Bootstrap
+> Borderless theme for Bootstrap ([preview](preview.png)).
+
 
 ## Install
 
