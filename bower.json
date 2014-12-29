@@ -1,11 +1,11 @@
 {
   "name": "bootstrap-borderless-theme",
   "description": "Borderless theme for Bootstrap",
-  "version": "0.12.29",
+  "version": "1.0.0",
   "authors": [
     "Kiko Beats <josefrancisco.verdu@gmail.com>"
   ],
-  "homepage": "https://github.com/Kikobeats/bootstrap-bordeless-theme",
+  "homepage": "https://kikobeats.github.io/bootstrap-borderless-theme",
   "ignore": [
     "**/.*",
     "node_modules",

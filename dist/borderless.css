@@ -1,6 +1,6 @@
 /**
  * bootstrap-borderless-theme - Borderless theme for Bootstrap
- * @version v0.12.29
+ * @version v1.0.0
  * @link    https://github.com/Kikobeats/borderless-theme-for-Bootstrap
  * @author  Kiko Beats (https://github.com/Kikobeats)
  * @license MIT
@@ -6316,11 +6316,14 @@ blockquote.pull-right {
     margin: 0;
   }
 }
-.nav-pills li {
+.nav-pills .dropdown-menu li {
+  border: none;
+}
+.nav-pills > li {
   border: 1px solid #3498db;
   border-radius: 4px;
 }
-.nav-pills li.disabled {
+.nav-pills > li.disabled {
   border-color: #eeeeee;
 }
 .nav-tabs > li > a,

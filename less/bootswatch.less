@@ -78,13 +78,18 @@ blockquote.pull-right {
   }
 }
 
-.nav-pills >  {
-  li {
+.nav-pills {
+
+  .dropdown-menu li {
+    border: none;
+  }
+
+  > li {
   border: 1px solid @brand-primary;
   border-radius: 4px;
   }
 
-  li.disabled {
+  > li.disabled {
     border-color: @gray-lighter;
   }
 }

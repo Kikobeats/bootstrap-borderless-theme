@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-borderless-theme",
   "description": "Borderless theme for Bootstrap",
-  "version": "0.12.29",
+  "version": "1.0.0",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
@@ -22,7 +22,7 @@
   "engines": {
     "node": "*"
   },
-  "homepage": "https://github.com/Kikobeats/borderless-theme-for-Bootstrap",
+  "homepage": "https://kikobeats.github.io/bootstrap-borderless-theme",
   "keywords": [
     "bootstrap",
     "theme",
