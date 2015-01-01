@@ -209,6 +209,12 @@ blockquote.pull-right {
   background-color:transparent;
   border-color: @border-color;
   color: @color;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover{
+    background-color: @border-color;
+    color: white;
+  }
 }
 
 .btn-size (@font-size, @height, @line-height, @padding) {

@@ -6425,31 +6425,67 @@ blockquote.pull-right {
   background-color: transparent;
   border-color: #999999;
   color: #666666;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+          transition: background-color 0.3s, color 0.3s;
+}
+.btn.btn-default:hover {
+  background-color: #999999;
+  color: white;
 }
 .btn.btn-primary {
   background-color: transparent;
   border-color: #3498db;
   color: #3498db;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+          transition: background-color 0.3s, color 0.3s;
+}
+.btn.btn-primary:hover {
+  background-color: #3498db;
+  color: white;
 }
 .btn.btn-success {
   background-color: transparent;
   border-color: #2ecc71;
   color: #2ecc71;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+          transition: background-color 0.3s, color 0.3s;
+}
+.btn.btn-success:hover {
+  background-color: #2ecc71;
+  color: white;
 }
 .btn.btn-info {
   background-color: transparent;
   border-color: #41c1dd;
   color: #41c1dd;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+          transition: background-color 0.3s, color 0.3s;
+}
+.btn.btn-info:hover {
+  background-color: #41c1dd;
+  color: white;
 }
 .btn.btn-warning {
   background-color: transparent;
   border-color: #f89406;
   color: #f89406;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+          transition: background-color 0.3s, color 0.3s;
+}
+.btn.btn-warning:hover {
+  background-color: #f89406;
+  color: white;
 }
 .btn.btn-danger {
   background-color: transparent;
   border-color: #ef4836;
   color: #ef4836;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+          transition: background-color 0.3s, color 0.3s;
+}
+.btn.btn-danger:hover {
+  background-color: #ef4836;
+  color: white;
 }
 .btn-bold {
   border-width: 2px;
